@@ -1,0 +1,41 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  width: 350px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgb(207, 204, 199);
+}
+
+.lable {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input {
+  padding: 3px 3px 3px 10px;
+  width: 100%;
+}
+
+.btn_submit {
+  padding: 5px;
+  width: 150px;
+  align-self: center;
+  border-radius: 10px;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn_submit:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.container {
+  max-width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}

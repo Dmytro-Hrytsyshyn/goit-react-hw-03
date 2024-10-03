@@ -1,0 +1,14 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #000;
+  background-color: rgb(207, 204, 199);
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
