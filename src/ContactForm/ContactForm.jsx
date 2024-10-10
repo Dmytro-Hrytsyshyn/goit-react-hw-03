@@ -13,10 +13,11 @@ const addContactShema = Yup.object({
   name: Yup.string()
     .min(2, "The name must be at least 2 characters long")
     .max(20)
-    .required("Name is required"),
+    .required("Name is required")
+    .matches(/\S/, "A-Z,a-z"),
   number: Yup.string()
     .required("Number is required")
-    .matches(phoneNumberRegex, "Invalid phone number"),
+    .matches(/\S/, phoneNumberRegex, "Invalid phone number"),
 });
 
 const ContactForm = ({ onAddContact }) => {
