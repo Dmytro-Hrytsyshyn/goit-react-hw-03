@@ -3,28 +3,30 @@ import css from "./Contact.module.css";
 import { FaUser } from "react-icons/fa";
 import { FaPhoneAlt } from "react-icons/fa";
 
-function Contact({ contacts }) {
+function Contact({ onDeleteContact, filteredContacts }) {
   return (
     <div className={css.container_contact}>
-      {contacts.map((contact) => (
-        <div className={css.contact_card} key={contact.id}>
+      {filteredContacts.map((contactData) => (
+        <div className={css.contact_card} key={contactData.id}>
           <ul className={css.info_contact_card}>
             <li className={css.info_contact}>
               <span>
                 <FaUser />
               </span>
 
-              {contact.name}
+              {contactData.name}
             </li>
             <li className={css.info_contact}>
               <span>
                 <FaPhoneAlt />
               </span>
 
-              {contact.number}
+              {contactData.number}
             </li>
           </ul>
-          <button type="sunmit">Delete</button>
+          <button type="button" onClick={() => onDeleteContact(contactData.id)}>
+            Delete
+          </button>
         </div>
       ))}
     </div>

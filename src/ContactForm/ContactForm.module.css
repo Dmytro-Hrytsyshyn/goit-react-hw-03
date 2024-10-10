@@ -39,3 +39,9 @@
   padding-right: 15px;
   margin: 0 auto;
 }
+
+.error_message {
+  font-weight: 500;
+  font-size: 15px;
+  color: red;
+}
