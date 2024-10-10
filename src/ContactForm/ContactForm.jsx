@@ -12,6 +12,7 @@ const phoneNumberRegex =
 const addContactShema = Yup.object({
   name: Yup.string()
     .min(2, "The name must be at least 2 characters long")
+    .max(20)
     .required("Name is required"),
   number: Yup.string()
     .required("Number is required")
