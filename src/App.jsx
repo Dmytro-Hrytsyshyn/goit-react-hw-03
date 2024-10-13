@@ -22,17 +22,11 @@ const getInitialContacts = () => {
 function App() {
   const [contacts, setContacts] = useState(getInitialContacts);
 
-  const [filter, setFilter] = useState(() => {
-    return localStorage.getItem("filter") || "";
-  });
+  const [filter, setFilter] = useState("");
 
   useEffect(() => {
     localStorage.setItem("contacts", JSON.stringify(contacts));
   }, [contacts]);
-
-  useEffect(() => {
-    localStorage.setItem("filter", filter);
-  }, [filter]);
 
   const filteredContacts = contacts.filter((contact) =>
     contact.name.toLocaleLowerCase().includes(filter.toLocaleLowerCase().trim())
